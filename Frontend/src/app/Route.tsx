@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
-import Root from "./Root";
-import Portfolio from "./Portfolio";
+import Root from "./components/Root";
+import Portfolio from "./components/Portfolio";
 
 
 export const router = createBrowserRouter([
