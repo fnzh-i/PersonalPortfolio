@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
       {/* CTA Button */}
       <button className="bg-brand-blue text-white px-5 py-2 rounded-full text-[20px] hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95">
-        Want to connect?
+        Let's connect!
       </button>
     </header>
   );
