@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       </nav>
 
       {/* CTA Button */}
-      <button className="bg-brand-blue text-white px-5 py-2 rounded-full text-[20px] hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95">
+      <button className="bg-brand-blue text-white px-5 py-2 rounded-full text-[18px] hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95">
         Let's connect!
       </button>
     </header>
