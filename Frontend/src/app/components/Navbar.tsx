@@ -8,7 +8,7 @@ interface NavLink {
 const Navbar: React.FC = () => {
   const navLinks: NavLink[] = [
     { label: 'About', href: '#' },
-    { label: 'Skills', href: '#' },
+    { label: 'Skills', href: '/skills' },
     { label: 'Stack', href: '#' },
     { label: 'Projects', href: '#' },
   ];
