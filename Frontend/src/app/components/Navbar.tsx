@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 rounded-2xl mt-6 mx-auto w-[90%] max-w-[1280px] macos-glass-thick">
       {/* Logo */}
       <a href="/" className="font-display-lg text-[32px] font-bold text-on-background tracking-tighter hover:text-brand-blue transition-colors">
-        FNSH
+        FN.SH
       </a>
 
       {/* Desktop Navigation */}

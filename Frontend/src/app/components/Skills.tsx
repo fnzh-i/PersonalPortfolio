@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const SkillBar = ({ name, percentage }: { name: string; percentage: string }) => (
   <div className="space-y-3">
@@ -132,6 +133,7 @@ const Skills = () => {
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full blur-[80px] -ml-20 -mb-20"></div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 };

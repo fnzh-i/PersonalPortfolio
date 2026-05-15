@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LoadingScreen from './LoadingScreen';
+import Footer from './Footer';
 
 
 interface SkillProps {
@@ -153,10 +154,7 @@ const Portfolio: React.FC = () => {
 
       </main>
 
-      <footer className="relative z-10 w-full max-w-[1280px] mx-auto px-16 py-12 flex flex-col md:flex-row justify-between items-center border-t border-black/5 mt-10">
-        <div className="text-[11px] text-secondary tracking-[0.2em] font-bold">FNSH.SH</div>
-        <div className="text-[14px] text-secondary/60">© 2024 FNSH.SH. All rights reserved.</div>
-      </footer>
+      <Footer />
     </div>
   );
 };

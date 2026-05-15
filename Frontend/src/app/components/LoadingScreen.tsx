@@ -71,7 +71,7 @@ const LoadingScreen: React.FC = () => {
               {/* Folder Front */}
               <div className="absolute bottom-0 left-0 w-full h-[85%] bg-gradient-to-b from-[#7dc0ff] to-[#1a8bff] rounded-xl z-20 flex flex-col justify-end p-8 shadow-2xl">
                 <p className="text-[10px] text-white/60 mb-1 tracking-[0.2em] font-bold">BOOTING SYSTEM</p>
-                <h2 className="text-3xl text-white font-bold tracking-tight font-display-lg">FNSH</h2>
+                <h2 className="text-3xl text-white font-bold tracking-tight font-display-lg">FN.SH</h2>
               </div>
             </motion.div>
 
@@ -102,7 +102,7 @@ const LoadingScreen: React.FC = () => {
 
       <footer className="w-full max-w-7xl mx-auto px-16 py-8 flex justify-between items-center opacity-30">
         <div className="text-[11px] text-slate-600 uppercase tracking-[0.2em] font-bold">
-          FNSH Studio v4.0
+          FNSH Shell v4.0
         </div>
       </footer>
     </div>
