@@ -21,7 +21,7 @@ const SkillBar = ({ name, percentage }: { name: string; percentage: string }) =>
 
 const Skills = () => {
   return (
-    <main id="skills" className="min-h-screen pt-40 pb-24 px-6 md:px-16 scroll-mt-20">
+    <main id="skills" className="min-h-screen pt-40 pb-24 px-6 md:px-16 scroll-mt-20 aluminum-bg">
       <div className="max-w-[1400px] mx-auto"> {/* Increased max-width for better spread */}
         
         {/* Title Section */}
