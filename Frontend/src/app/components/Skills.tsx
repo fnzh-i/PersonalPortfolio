@@ -33,8 +33,8 @@ const Skills = () => {
           >
             Expertise & Capabilities
           </motion.div>
-          <h1 className="font-display-lg text-5xl md:text-[64px] text-on-background tracking-tight leading-tight">
-            Skills & <span className="italic font-normal text-gradient-blue">Technical Depth</span>
+          <h1 className="font-display-lg text-5xl md:text-[64px] text-on-background tracking-tight leading-[1.1]">
+            Skills & <span className="inline-block pr-1 italic font-normal text-gradient-blue"> Technical Depth </span>
           </h1>
           <p className="font-body-lg text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
             A comprehensive overview of my architectural expertise, development proficiencies, and industrial-grade tools.
