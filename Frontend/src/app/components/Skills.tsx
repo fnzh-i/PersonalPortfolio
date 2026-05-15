@@ -21,8 +21,12 @@ const SkillBar = ({ name, percentage }: { name: string; percentage: string }) =>
 
 const Skills = () => {
   return (
-    <main id="skills" className="min-h-screen pt-40 pb-24 px-6 md:px-16 scroll-mt-20 aluminum-bg">
-      <div className="max-w-[1400px] mx-auto"> {/* Increased max-width for better spread */}
+    <main id="skills" className="relative overflow-hidden min-h-screen pt-40 pb-24 px-6 md:px-16 scroll-mt-20 aluminum-bg">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="ambient-wires absolute inset-0 opacity-50" />
+        <div className="ambient-particles absolute inset-0 opacity-60" />
+      </div>
+      <div className="relative z-10 max-w-[1400px] mx-auto"> {/* Increased max-width for better spread */}
         
         {/* Title Section */}
         <div className="text-center mb-20 space-y-4">

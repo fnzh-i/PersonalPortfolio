@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Root from "./components/Root";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
+import TechStack from "./components/TechStack";
 
 
 export const router = createBrowserRouter([
@@ -11,6 +12,7 @@ export const router = createBrowserRouter([
         children: [
         { index: true, Component: Portfolio },
         { path: "skills", Component: Skills },
+        { path: "stack", Component: TechStack },
         ],
     },
 ]);
