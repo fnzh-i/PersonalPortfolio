@@ -98,7 +98,7 @@ const Portfolio: React.FC = () => {
                 </p>
                 <a className="inline-flex items-center gap-3 text-[16px] text-brand-blue hover:translate-x-2 transition-all group font-medium" href="#">
                   Download Resume 
-                  <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                  <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>
