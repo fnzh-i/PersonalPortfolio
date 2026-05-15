@@ -77,13 +77,17 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
           <div className="flex-1 w-full relative">
-            <div className="aspect-square max-w-[420px] mx-auto rounded-[48px] bg-white/30 macos-glass-thick p-1.5 shadow-2xl">
-              <div className="w-full h-full rounded-[42px] overflow-hidden">
-                <img 
-                  className="w-full h-full object-cover" 
-                  src="https://avatars.githubusercontent.com/u/198473281?v=4" 
-                  alt="Minimalist abstract glass render" 
-                />
+            <div className="aspect-square max-w-[420px] mx-auto">
+              <div className="rounded-[48px] shadow-2xl">
+                <div className="rounded-[48px] bg-white/30 macos-glass-thick p-1.5 overflow-hidden">
+                  <div className="w-full h-full rounded-[42px] overflow-hidden">
+                    <img 
+                      className="w-full h-full object-cover" 
+                      src="https://avatars.githubusercontent.com/u/198473281?v=4" 
+                      alt="Minimalist abstract glass render" 
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
