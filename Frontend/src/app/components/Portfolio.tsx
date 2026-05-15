@@ -129,7 +129,7 @@ const Portfolio: React.FC = () => {
                   server architecture, and the "process" of turning complex problems into clean, executable code.
                 </p>
                 <a className="inline-flex items-center gap-3 font-bold text-brand-blue group transition-all text-lg" href="#">
-                  Download Resume
+                  Read more
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </a>
               </div>
