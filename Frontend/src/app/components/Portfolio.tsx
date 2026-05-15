@@ -45,8 +45,8 @@ const Portfolio: React.FC = () => {
   }
 
   return (
-    <div className="relative overflow-hidden font-body-md text-on-background selection:bg-brand-blue selection:text-white aluminum-bg min-h-screen">
-      <div className="pointer-events-none absolute inset-0">
+    <div className="relative font-body-md text-on-background selection:bg-brand-blue selection:text-white aluminum-bg min-h-screen">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="ambient-wires absolute inset-0 opacity-50" />
         <div className="ambient-particles absolute inset-0 opacity-60" />
       </div>
@@ -59,9 +59,12 @@ const Portfolio: React.FC = () => {
             <div className="inline-block bg-white/60 backdrop-blur-xl px-4 py-1 rounded-full border border-white/80 text-brand-blue text-[11px] font-bold uppercase tracking-widest shadow-sm">
               FULL-STACK DEVELOPER & SOFTWARE ENGINEER
             </div>
-            <h1 className="font-display-lg text-5xl md:text-[64px] text-on-background leading-[1.1]">
-              Engineering digital <span className="inline-block pr-2 italic font-normal text-gradient-blue">stability</span> for complex systems.
+            <h1 className="font-display-lg font-medium text-5xl md:text-[64px] text-on-background leading-[1.1]">
+              Evert Matthew<span className="inline-block pr-2 italic font-bold text-gradient-blue">"FANSHI"</span> Matias
             </h1>
+            <p className="text-lg md:text-xl text-on-background/80 font-medium">
+              Engineering digital stability for complex systems.
+            </p>
             <p className="text-lg text-secondary max-w-xl leading-relaxed">
               I specialize in the intersection of
               <span className="font-medium text-on-background"> software systems, networking, and server-side architecture</span>
