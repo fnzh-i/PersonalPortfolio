@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import LoadingScreen from './LoadingScreen';
 
 
 interface SkillProps {
@@ -15,13 +16,33 @@ interface SkillProps {
 //   isLarge?: boolean;
 // }
 
+let hasShownPortfolioLoader = false;
+
 const Portfolio: React.FC = () => {
+  const [showLoading, setShowLoading] = useState(() => !hasShownPortfolioLoader);
+
+  useEffect(() => {
+    if (!showLoading) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      hasShownPortfolioLoader = true;
+      setShowLoading(false);
+    }, 3000);
+
+    return () => window.clearTimeout(timer);
+  }, [showLoading]);
 
   const skills: SkillProps[] = [
     { name: 'Systems Design', percentage: '85%' },
     { name: 'System Architecture', percentage: '90%' },
     { name: 'Backend & Networking', percentage: '95%' },
   ];
+
+  if (showLoading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <div className="font-body-md text-on-background selection:bg-brand-blue selection:text-white aluminum-bg min-h-screen">
