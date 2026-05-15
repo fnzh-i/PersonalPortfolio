@@ -74,7 +74,7 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
           <div className="flex-1 w-full relative">
-            <div className="aspect-square rounded-[48px] overflow-hidden bg-white/30 macos-glass-thick p-1.5 shadow-2xl">
+            <div className="aspect-square max-w-[420px] mx-auto rounded-[48px] overflow-hidden bg-white/30 macos-glass-thick p-1.5 shadow-2xl">
               <div className="w-full h-full rounded-[42px] overflow-hidden">
                 <img 
                   className="w-full h-full object-cover" 
