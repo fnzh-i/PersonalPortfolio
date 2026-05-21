@@ -15,7 +15,7 @@ const categories = [
   {
     title: "Data",
     kicker: "Persistence",
-    items: ["MySQL", "Firebase", "Redis", "SQLite"],
+    items: ["MySQL", "MariaDB", "Firebase", "Supabase", "Redis", "SQLite"],
   },
   {
     title: "Infrastructure",
@@ -57,7 +57,7 @@ const TechStack: React.FC = () => {
         <section className="macos-glass-thick rounded-[40px] p-12 mb-8 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => (
-              <div key={category.title} className="rounded-[28px] border border-white/60 bg-white/40 p-8 shadow-sm">
+              <div key={category.title} className="techstack-card rounded-[28px] border border-white/60 bg-white/40 p-8 shadow-sm">
                 <div className="mb-6">
                   <span className="text-[11px] text-secondary uppercase tracking-[0.2em] font-bold">
                     {category.kicker}
