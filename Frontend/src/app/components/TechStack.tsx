@@ -15,7 +15,7 @@ const categories = [
   {
     title: "Data",
     kicker: "Persistence",
-    items: ["MySQL", "MariaDB", "Firebase", "Supabase", "Redis", "SQLite"],
+    items: ["MySQL", "MariaDB", "Firebase", "Supabase", "SQLite"],
   },
   {
     title: "Infrastructure",
