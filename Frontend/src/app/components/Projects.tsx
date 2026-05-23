@@ -27,7 +27,7 @@ const projects: Project[] = [
     title: "Gltch",
     summary:"The project involves creating a dynamic, multi-step e-commerce and campaign website.",
     fullSummary: "It replaces traditional, cluttered festival layouts with an intuitive user experience featuring a track-filterable event schedule and a foolproof, 3-step checkout wizard designed to maximize conversions.",
-    highlights: [],
+    highlights: ["React / Next.js (App Router)","Framer Motion (High-energy CSS transitions & Glitch effects)","Tailwind CSS (Brutalist Dark-Mode UI)"],
     repoUrl: "https://github.com/fnzh-i/GLTCH",
   },
 ];
