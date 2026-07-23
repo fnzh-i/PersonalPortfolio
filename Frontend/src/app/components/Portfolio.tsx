@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import LoadingScreen from './LoadingScreen';
 import Footer from './Footer';
+import { FeaturedProjects } from './FeaturedProjects';
 
 
 interface SkillProps {
   name: string;
   percentage: string;
 }
-
-// interface ProjectProps {
-//   id: string;
-//   category: string;
-//   title: string;
-//   description: string;
-//   imageUrl: string;
-//   isLarge?: boolean;
-// }
 
 let hasShownPortfolioLoader = false;
 
@@ -153,7 +145,7 @@ const Portfolio: React.FC = () => {
         </section>
 
       </main>
-
+      <FeaturedProjects/>
       <Footer />
     </div>
   );
