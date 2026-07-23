@@ -1,73 +1,61 @@
-// src/app/components/data/ProjectCard.tsx
-import React, { useState } from 'react';
-import type { Project } from './data/projectsData';
-
-interface ProjectCardProps {
-  project: Project;
+import React, { useState } from "react";
+import Footer from "./Footer";
+import { ProjectCard } from "./data/projectCard";
+import { PROJECTS_DATA, type Project } from "./data/projectsData";
+interface ProjectsProps {
+  projectsList?: Project[];
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const Projects: React.FC<ProjectsProps> = ({ projectsList = PROJECTS_DATA }) => {
+  const [filter, setFilter] = useState<"all" | "featured" | "other">("all");
+  const filteredProjects = projectsList.filter((project) => {
+    if (filter === "featured") return project.featured;
+    if (filter === "other") return !project.featured;
+    return true;
+  });
 
   return (
-    <article className="macos-glass-thick rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-stretch justify-between w-full">
-      {project.imageUrl && (
-        <div className="w-full md:w-2/5 aspect-[16/10] rounded-2xl overflow-hidden border border-white/80 shadow-sm flex-shrink-0 bg-black/5">
-          <img
-            src={project.imageUrl}
-            alt={`${project.title} preview`}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-      )}
-
-      <div className="flex-1 flex flex-col justify-between space-y-4">
-        <div>
-          <span className="text-[11px] text-secondary uppercase tracking-[0.2em] font-bold">
-            {project.featured ? 'Featured Project' : 'Project'}
-          </span>
-
-          <h3 className="text-2xl md:text-3xl font-display-lg text-on-background font-medium mt-1 mb-3">
-            {project.title}
-          </h3>
-
-          <p className="text-secondary text-[15px] md:text-[16px] leading-relaxed">
-            {isExpanded ? project.fullSummary : project.summary}
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2 pt-2">
-          {project.highlights.map((highlight) => (
-            <span
-              key={highlight}
-              className="px-3 py-1.5 bg-white/70 border border-white/80 rounded-xl text-[12px] text-on-background font-medium shadow-sm"
-            >
-              {highlight}
-            </span>
-          ))}
+    <main
+      id="projects"
+      className="relative overflow-hidden min-h-screen pt-40 pb-24 px-6 md:px-16 scroll-mt-20 aluminum-bg"
+    >
+      <div className="relative z-10 max-w-[1200px] mx-auto">
+        <div className="text-center mb-12 space-y-4">
+          <div className="inline-block bg-white/60 backdrop-blur-xl px-4 py-1 rounded-full border border-white/80 text-brand-blue text-[11px] font-bold uppercase tracking-widest shadow-sm">
+            Selected Work
+          </div>
+          <h1 className="font-display-lg text-5xl md:text-[64px] text-on-background tracking-tight leading-[1.1]">
+            Projects <span className="inline-block pr-2 italic font-normal text-gradient-blue">Showcase</span>
+          </h1>
+          <div className="flex justify-center gap-3 pt-4">
+            {(["all", "featured", "other"] as const).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setFilter(tab)}
+                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
+                  filter === tab
+                    ? "bg-brand-blue text-white shadow-md"
+                    : "bg-white/60 text-secondary border border-white/80 hover:bg-white"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 pt-4">
-          <button
-            type="button"
-            onClick={() => setIsExpanded((prev) => !prev)}
-            className="bg-brand-blue text-white px-5 py-2.5 rounded-xl font-semibold text-[14px] hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95"
-          >
-            {isExpanded ? 'View brief summary' : 'View full summary'}
-          </button>
-
-          {project.repoUrl && (
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white text-on-background px-5 py-2.5 rounded-xl font-semibold text-[14px] border border-white/80 hover:bg-white/90 transition-all shadow-sm"
-            >
-              View GitHub Repo
-            </a>
-          )}
-        </div>
+        <section className="macos-glass-thick rounded-[40px] p-8 md:p-12">
+          <div className="grid grid-cols-1 gap-8">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
       </div>
-    </article>
+
+      <Footer />
+    </main>
   );
 };
+
+export default Projects;
