@@ -1,4 +1,3 @@
-// src/app/components/data/FeaturedProjectCard.tsx
 import React, { useState } from 'react';
 import type { Project } from './projectsData';
 
