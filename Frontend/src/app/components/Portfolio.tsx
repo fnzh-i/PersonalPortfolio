@@ -3,7 +3,6 @@ import LoadingScreen from './LoadingScreen';
 import Footer from './Footer';
 import { FeaturedProjects } from './FeaturedProjects';
 
-
 interface SkillProps {
   name: string;
   percentage: string;
@@ -129,6 +128,7 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
         </section>
+        <FeaturedProjects />
 
         {/* CTA Section */}
         <section className="mb-20">
@@ -145,7 +145,6 @@ const Portfolio: React.FC = () => {
         </section>
 
       </main>
-      <FeaturedProjects/>
       <Footer />
     </div>
   );

@@ -1,5 +1,4 @@
-// ProjectCard.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import type { Project } from './projectsData';
 
 interface ProjectCardProps {
@@ -7,48 +6,66 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className="bg-white/70 backdrop-blur-[50px] saturate-[200%] border border-white/80 shadow-[0_20px_60px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(255,255,255,0.4)] rounded-[32px] overflow-hidden group flex flex-col justify-between">
-      
-      {/* Image or Icon Preview */}
-      <div className="aspect-[16/10] overflow-hidden relative bg-[#2563eb]/5 flex items-center justify-center">
-        {project.imageUrl ? (
+    <article className="macos-glass-thick rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-stretch justify-between w-full">
+      {project.imageUrl && (
+        <div className="w-full md:w-2/5 aspect-[16/10] rounded-2xl overflow-hidden border border-white/80 shadow-sm flex-shrink-0 bg-black/5">
           <img
             src={project.imageUrl}
-            alt={`${project.title} Preview`}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            alt={`${project.title} preview`}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
-        ) : (
-          <span className="material-symbols-outlined text-[64px] text-[#2563eb]/20 group-hover:text-[#2563eb]/30 transition-colors">
-            {project.iconName || 'code'}
-          </span>
-        )}
-        <div className="absolute inset-0 bg-[#2563eb]/0 group-hover:bg-[#2563eb]/5 transition-colors pointer-events-none" />
-      </div>
+        </div>
+      )}
 
-      {/* Content Section */}
-      <div className="p-8 flex-1 flex flex-col justify-between">
+      <div className="flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <h3 className="font-['Geist',sans-serif] text-[20px] font-medium text-[#1a1b1f] mb-2">
+          <span className="text-[11px] text-secondary uppercase tracking-[0.2em] font-bold">
+            {project.featured ? 'Featured Project' : 'Project'}
+          </span>
+
+          <h3 className="text-2xl md:text-3xl font-display-lg text-on-background font-medium mt-1 mb-3">
             {project.title}
           </h3>
-          <p className="font-['Inter',sans-serif] text-[15px] text-[#5d5e63] mb-6 leading-relaxed">
-            {project.description}
+
+          <p className="text-secondary text-[15px] md:text-[16px] leading-relaxed">
+            {isExpanded ? project.fullSummary : project.summary}
           </p>
         </div>
 
-        {/* Tech Stack Tags */}
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
+        <div className="flex flex-wrap gap-2 pt-2">
+          {project.highlights.map((highlight) => (
             <span
-              key={tag}
-              className="px-3 py-1 bg-white/60 border border-white/80 rounded-lg text-[11px] font-['Geist',sans-serif] font-semibold text-[#5d5e63] shadow-sm uppercase tracking-[0.1em]"
+              key={highlight}
+              className="px-3 py-1.5 bg-white/70 border border-white/80 rounded-xl text-[12px] text-on-background font-medium shadow-sm"
             >
-              {tag}
+              {highlight}
             </span>
           ))}
         </div>
+
+        <div className="flex flex-wrap items-center gap-3 pt-4">
+          <button
+            type="button"
+            onClick={() => setIsExpanded((prev) => !prev)}
+            className="bg-brand-blue text-white px-5 py-2.5 rounded-xl font-semibold text-[14px] hover:shadow-lg hover:shadow-brand-blue/20 transition-all active:scale-95"
+          >
+            {isExpanded ? 'View brief summary' : 'View full summary'}
+          </button>
+
+          {project.repoUrl && (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white text-on-background px-5 py-2.5 rounded-xl font-semibold text-[14px] border border-white/80 hover:bg-white/90 transition-all shadow-sm"
+            >
+              View GitHub Repo
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
