@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import { ProjectCard } from "./data/projectCard";
+import { ProjectCard } from "./data/ProjectCard";
 import { PROJECTS_DATA, type Project } from "./data/projectsData";
 interface ProjectsProps {
   projectsList?: Project[];
