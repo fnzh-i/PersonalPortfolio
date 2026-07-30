@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks: NavLink[] = [
-    { label: 'About', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'Skills', href: '/skills' },
     { label: 'Stack', href: '/stack' },
     { label: 'Projects', href: '/projects' },
