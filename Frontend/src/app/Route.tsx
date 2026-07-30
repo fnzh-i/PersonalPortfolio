@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import Root from "./components/Root";
+import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import TechStack from "./components/TechStack";
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
         Component: Root,
         children: [
         { index: true, Component: Portfolio },
+        { path: "about", Component: About },
         { path: "skills", Component: Skills },
         { path: "stack", Component: TechStack },
         { path: "projects", Component: Projects },
