@@ -26,7 +26,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   }
 
   return (
-    <section className="mb-20 max-w-[1280px] mx-auto relative" id="projects">
+    <section className="mb-20 max-w-[1280px] mx-auto relative overflow-visible" id="projects">
       {/* Header */}
       <div className="flex justify-between items-end mb-8 px-2 sm:px-0">
         <div>
@@ -50,7 +50,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
 
       <div
         ref={carouselRef}
-        className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory hide-scrollbar"
+        className="flex overflow-x-auto gap-6 pt-2 pb-6 snap-x snap-mandatory hide-scrollbar"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {featuredOnlyProjects.map((project) => (
