@@ -111,55 +111,61 @@ export const About: React.FC = () => {
         <section id="overview" className="max-w-[1280px] mx-auto px-6 md:px-16 mb-24">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             
-            {/* Apple Floating Photo Projection */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div
+            <div
                 ref={cardRef}
                 onMouseMove={handlePhotoMouseMove}
                 onMouseLeave={handlePhotoMouseLeave}
-                className="relative group w-full max-w-[440px] aspect-[4/5] rounded-[40px] p-2.5 transition-transform duration-200 ease-out cursor-pointer"
+                className="relative group w-full max-w-[440px] aspect-[4/5] rounded-[40px] p-2.5 transition-transform duration-200 ease-out cursor-pointer overflow-hidden transform-gpu"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 100%)',
-                  boxShadow:
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 100%)',
+                boxShadow:
                     '0 30px 60px -12px rgba(50, 50, 93, 0.15), 0 18px 36px -18px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.9)',
                 }}
-              >
+            >
                 {/* Back Light Glow */}
                 <div className="absolute -inset-6 bg-gradient-to-tr from-brand-blue/30 via-indigo-500/10 to-transparent blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none" />
 
                 {/* Glass Bezel Container */}
-                <div className="relative w-full h-full rounded-[32px] overflow-hidden bg-slate-900 border border-white/40">
-                  <img
+                <div className="relative w-full h-full rounded-[32px] overflow-hidden bg-slate-900 border border-white/40 transform-gpu">
+                <img
                     alt="Evert Matthew Matias"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"
                     src="https://avatars.githubusercontent.com/u/198473281?v=4"
-                  />
+                />
 
-                  {/* Glass Reflection Sweep */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none transform -translate-x-full group-hover:translate-x-full" />
+                {/* FIXED: Glass Reflection Sweep Overlay */}
+                <div 
+                    className="absolute inset-0 pointer-events-none z-10 transition-transform duration-1000 ease-in-out -translate-x-full group-hover:translate-x-full"
+                    style={{
+                    background: 'linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.25) 50%, transparent 80%)',
+                    }}
+                />
 
-                  {/* macOS Control Status Badge */}
-                  <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/60 backdrop-blur-xl border border-white/20 shadow-lg">
+                {/* macOS Control Status Badge */}
+                <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/60 backdrop-blur-xl border border-white/20 shadow-lg">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-[10px] font-mono tracking-wider uppercase text-slate-200 font-medium">
-                      FULLSTACK // DEV
+                    FULLSTACK // DEV
                     </span>
-                  </div>
-
-                  {/* Floating Caption Tag */}
-                  <div className="absolute bottom-4 left-4 right-4 z-20 p-4 rounded-2xl bg-white/70 backdrop-blur-2xl border border-white/60 shadow-lg flex items-center justify-between">
-                    <div>
-                      <h4 className="text-sm font-semibold text-slate-900">Evert Matthew Matias</h4>
-                      <p className="text-[11px] text-slate-500 font-mono">@FANSHI • PH</p>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                <div className="absolute bottom-4 left-4 right-4 z-20 p-4 rounded-[22px] bg-white/70 backdrop-blur-2xl border border-white/80 shadow-xl shadow-black/5 flex items-center justify-between transition-all duration-300 group-hover:bg-white/80">
+                    <div>
+                    <h4 className="text-sm font-semibold text-slate-900 tracking-tight">
+                        Evert Matthew Matias
+                    </h4>
+                    <p className="text-[12px] text-slate-500 font-medium tracking-tight">
+                        Full-Stack Engineer • NCR, PH
+                    </p>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-[#0071e3]/10 text-[#0071e3] flex items-center justify-center">
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+            </div>
             </div>
 
             {/* Content Side */}
@@ -167,9 +173,13 @@ export const About: React.FC = () => {
               <span className="inline-block bg-white/80 backdrop-blur-xl px-4 py-1.5 rounded-full border border-slate-200 text-brand-blue text-[11px] font-bold uppercase tracking-widest shadow-sm">
                 BIOGRAPHY & ENGINEERING PHILOSOPHY
               </span>
-              <h1 className="text-4xl md:text-6xl font-display-lg text-slate-900 font-semibold leading-[1.05]">
-                Building end-to-end <span className="text-gradient-blue italic">digital applications</span>.
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-display-lg text-slate-900 font-semibold leading-[1.1] tracking-tight">
+                Building end-to-end{' '}
+                <span className="text-gradient-blue italic inline-block pr-2">
+                    digital applications
+                </span>
+                .
+                </h1>
               <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
                 I am Evert Matthew Matias, known online as{' '}
                 <span className="text-brand-blue font-semibold">FANSHI</span>. A full-stack & backend software dev engineer and CS student based in the Philippines, focused on crafting scalable web applications, robust APIs, and clean backend systems.
