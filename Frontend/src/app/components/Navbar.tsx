@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 
 interface NavLink {
@@ -9,9 +9,11 @@ interface NavLink {
 const Navbar: React.FC = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const navLinks: NavLink[] = [
-    { label: 'About', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'Skills', href: '/skills' },
     { label: 'Stack', href: '/stack' },
     { label: 'Projects', href: '/projects' },
@@ -20,8 +22,33 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (isOpen || currentScrollY < 50) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling Down -> Hide Navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling Up -> Show Navbar
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, isOpen]);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 mt-6 mx-auto w-[90%] max-w-[1280px] ios16-glass-navbar glass-edge-shimmer rounded-[28px] transition-all duration-300">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 mt-6 mx-auto w-[90%] max-w-[1280px] ios16-glass-navbar glass-edge-shimmer rounded-[28px] transition-all duration-300 ${
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-32 opacity-0 pointer-events-none'
+      }`}
+    >
       {/* Top Bar Container */}
       <div className="flex justify-between items-center px-6 py-2.5">
         {/* Brand / Logo */}
