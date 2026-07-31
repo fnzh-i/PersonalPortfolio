@@ -73,6 +73,52 @@ const Portfolio: React.FC = () => {
           {/* Clean Graphic Display - Apple Hardware & UI Presentation */}
           <div className="flex-1 w-full relative flex justify-center items-center">
             <div className="aspect-square w-full max-w-[380px] md:max-w-[420px] relative group">
+              {/* Top-Right Floating Tech Tag */}
+              <div className="absolute -top-3 -right-3 z-30 px-3 py-1.5 rounded-xl bg-slate-950/70 backdrop-blur-md border border-white/20 shadow-xl flex items-center gap-2 animate-bounce-slow transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-emerald-500/20 hover:bg-slate-950/90 cursor-pointer">
+                <span className="font-mono text-[10px] text-slate-300">
+                  <span className="text-emerald-400 animate-pulse">⌘</span> 200
+                  OK
+                </span>
+              </div>
+
+              {/* Bottom-Left Terminal Chip */}
+              <div className="absolute -bottom-2 -left-4 z-30 px-3.5 py-2 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/20 shadow-xl flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-amber-400/50 hover:shadow-amber-500/10 hover:bg-slate-950/95 cursor-pointer">
+                <div className="flex gap-1">
+                  <div className="w-1.5 h-1.5 rounded-full bg-red-400/80" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
+                </div>
+                <span className="font-mono text-[10px] text-slate-300">
+                  npm run dev
+                </span>
+              </div>
+
+              {/* Corner Viewfinder Accents - Expand outwards on container hover */}
+              <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-white/40 rounded-tl-md pointer-events-none transition-transform duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border-white/80" />
+              <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-white/40 rounded-tr-md pointer-events-none transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:border-white/80" />
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-white/40 rounded-bl-md pointer-events-none transition-transform duration-500 group-hover:-translate-x-1 group-hover:translate-y-1 group-hover:border-white/80" />
+              <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-white/40 rounded-br-md pointer-events-none transition-transform duration-500 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:border-white/80" />
+
+              {/* Floating Stack Badge 1 (TS) */}
+              <div className="absolute top-1/3 -left-6 z-30 p-2.5 rounded-2xl bg-slate-950/60 backdrop-blur-md border border-white/20 shadow-lg text-slate-200 transition-all duration-300 hover:scale-125 hover:-translate-x-1 hover:border-emerald-400/60 hover:shadow-emerald-500/20 hover:bg-slate-950/90 cursor-pointer">
+                <span className="font-mono text-[11px] font-semibold text-emerald-400">
+                  TS
+                </span>
+              </div>
+
+              {/* Floating Stack Badge 2 (React) */}
+              <div className="absolute top-1/2 -right-6 z-30 p-2.5 rounded-2xl bg-slate-950/60 backdrop-blur-md border border-white/20 shadow-lg text-slate-200 transition-all duration-300 hover:scale-125 hover:translate-x-1 hover:border-sky-400/60 hover:shadow-sky-500/20 hover:bg-slate-950/90 cursor-pointer">
+                <span className="font-mono text-[11px] font-semibold text-sky-400">
+                  React
+                </span>
+              </div>
+
+              {/* Interactive Radar Rings */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-[110%] h-[110%] rounded-[50px] border border-slate-900/15 group-hover:scale-105 group-hover:border-brand-blue/40 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.15)] transition-all duration-700" />
+                <div className="w-[125%] h-[125%] rounded-[60px] border border-dashed border-slate-900/10 animate-radar opacity-60 group-hover:scale-110 group-hover:opacity-100 group-hover:border-brand-blue/30 transition-all duration-1000" />
+              </div>
+
               {/* Ambient Backlight Glow (Hardware Projection) */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue/30 via-indigo-500/20 to-transparent blur-3xl opacity-40 group-hover:opacity-75 transition-opacity duration-700 pointer-events-none rounded-[56px]" />
 
