@@ -63,9 +63,10 @@ export const About: React.FC = () => {
   };
 
   const skills: SkillProps[] = [
-    { name: 'Systems Design', percentage: '85%' },
-    { name: 'System Architecture', percentage: '90%' },
-    { name: 'Backend & Networking', percentage: '95%' },
+    { name: 'Backend & API Engineering', percentage: '95%' },
+    { name: 'Full-Stack Web Development', percentage: '90%' },
+    { name: 'Database Architecture & ORMs', percentage: '85%' },
+    { name: 'System Performance & Security', percentage: '80%' },
   ];
 
   return (
@@ -79,34 +80,34 @@ export const About: React.FC = () => {
       {/* Side Nav (Desktop only) */}
       <aside className="fixed left-0 top-0 h-full w-64 hidden lg:flex flex-col p-8 space-y-8 bg-white/60 backdrop-blur-[30px] border-r border-slate-200/80 z-40 pt-28">
         <div className="mb-8">
-          <h2 className="text-xl font-medium text-slate-900">System Architect</h2>
+          <h2 className="text-xl font-medium text-slate-900">Software Engineer</h2>
           <p className="text-xs uppercase tracking-widest text-slate-500 font-semibold mt-1">
             E. Matthew Matias
           </p>
         </div>
         <nav className="flex flex-col space-y-2">
-          <div className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg cursor-pointer transition-all">
+          <a href="#overview" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <span className="material-symbols-outlined text-brand-blue">dashboard</span>
             <span className="text-xs uppercase tracking-wider font-semibold">Overview</span>
-          </div>
-          <div className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg cursor-pointer transition-all">
+          </a>
+          <a href="#competencies" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <span className="material-symbols-outlined text-brand-blue">terminal</span>
             <span className="text-xs uppercase tracking-wider font-semibold">Tech Stack</span>
-          </div>
-          <div className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg cursor-pointer transition-all">
-            <span className="material-symbols-outlined text-brand-blue">folder_special</span>
-            <span className="text-xs uppercase tracking-wider font-semibold">Case Studies</span>
-          </div>
-          <div className="flex items-center space-x-3 p-3 bg-white text-slate-900 rounded-lg cursor-pointer transition-all shadow-sm border border-slate-200/60">
+          </a>
+          <a href="#narrative" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <span className="material-symbols-outlined text-brand-blue">person</span>
             <span className="text-xs uppercase tracking-wider font-semibold">Biography</span>
-          </div>
+          </a>
+          <a href="#evolution" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
+            <span className="material-symbols-outlined text-brand-blue">timeline</span>
+            <span className="text-xs uppercase tracking-wider font-semibold">Timeline</span>
+          </a>
         </nav>
       </aside>
 
       <main className="relative z-10 lg:ml-64 pt-12 pb-20">
         {/* Apple-Style Hero Projection Section */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-16 mb-24">
+        <section id="overview" className="max-w-[1280px] mx-auto px-6 md:px-16 mb-24">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             
             {/* Apple Floating Photo Projection */}
@@ -140,7 +141,7 @@ export const About: React.FC = () => {
                   <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/60 backdrop-blur-xl border border-white/20 shadow-lg">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-[10px] font-mono tracking-wider uppercase text-slate-200 font-medium">
-                      SYS.ARCH // ACTIVE
+                      FULLSTACK // DEV
                     </span>
                   </div>
 
@@ -161,31 +162,29 @@ export const About: React.FC = () => {
             {/* Content Side */}
             <div className="w-full lg:w-1/2 space-y-6">
               <span className="inline-block bg-white/80 backdrop-blur-xl px-4 py-1.5 rounded-full border border-slate-200 text-brand-blue text-[11px] font-bold uppercase tracking-widest shadow-sm">
-                WHO I AM
+                BIOGRAPHY & ENGINEERING PHILOSOPHY
               </span>
               <h1 className="text-4xl md:text-6xl font-display-lg text-slate-900 font-semibold leading-[1.05]">
-                Architecting the next <span className="text-gradient-blue italic">digital frontier</span>.
+                Building end-to-end <span className="text-gradient-blue italic">digital applications</span>.
               </h1>
               <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                I am Evert Matthew Matias, known in the space as{' '}
-                <span className="text-brand-blue font-semibold">FANSHI</span>. A software engineer and
-                student based in the Philippines, focused on building robust, high-performance
-                systems from the ground up.
+                I am Evert Matthew Matias, known online as{' '}
+                <span className="text-brand-blue font-semibold">FANSHI</span>. A full-stack & backend software dev engineer and CS student based in the Philippines, focused on crafting scalable web applications, robust APIs, and clean backend systems.
               </p>
             </div>
           </div>
         </section>
 
         {/* Core Competencies Skill Bars */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-16 mb-20">
+        <section id="competencies" className="max-w-[1280px] mx-auto px-6 md:px-16 mb-20">
           <div className="macos-glass-thick rounded-[32px] p-8 md:p-12 border border-white/80 shadow-sm">
             <span className="text-[11px] text-slate-500 uppercase tracking-[0.2em] font-bold">
               Technical Proficiency
             </span>
             <h2 className="text-3xl font-display-lg text-slate-900 mt-2 mb-8">
-              Core Competencies
+              Core Competencies & Stack
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {skills.map((skill) => (
                 <div key={skill.name} className="space-y-3">
                   <div className="flex justify-between items-end">
@@ -205,21 +204,19 @@ export const About: React.FC = () => {
         </section>
 
         {/* Personal Narrative */}
-        <section className="py-20 border-y border-slate-200/80 bg-white/40 backdrop-blur-md">
+        <section id="narrative" className="py-20 border-y border-slate-200/80 bg-white/40 backdrop-blur-md">
           <div className="max-w-[1280px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
             <div className="md:col-span-4 sticky top-28 h-fit">
               <h2 className="text-3xl font-display-lg text-slate-900 font-medium mb-4">
                 The Self-Taught <br />
-                Builder
+                Full-Stack Dev
               </h2>
               <div className="w-12 h-1 bg-brand-blue rounded-full mb-8" />
             </div>
             <div className="md:col-span-8 space-y-8">
               <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
-                My journey began not in a classroom, but behind a glowing screen late at night,
-                unraveling the mysteries of assembly and low-level architecture. As a self-taught
-                engineer, I developed a visceral need to understand how things work under the
-                hood—from packet header manipulation to the intricacies of server-side concurrency.
+                My software journey started with curiosity—understanding how web applications handle data flow from interactive frontends down to the backend database layers. 
+                As a self-taught engineer currently pursuing a CS degree in the Philippines, I specialize in engineering complete web ecosystems.
               </p>
               <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
                 Being based in the Philippines has shaped my perspective on efficiency and
@@ -230,17 +227,17 @@ export const About: React.FC = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <span className="material-symbols-outlined text-brand-blue mb-2">dns</span>
-                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Server-Side</h3>
+                  <span className="material-symbols-outlined text-brand-blue mb-2">terminal</span>
+                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Backend Development</h3>
                   <p className="text-sm text-slate-600">
-                    Specializing in high-concurrency architectures and distributed systems.
+                    High-performance server REST APIs, authentication workflows, and microservices.
                   </p>
                 </div>
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <span className="material-symbols-outlined text-brand-blue mb-2">hub</span>
-                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Networking</h3>
+                  <span className="material-symbols-outlined text-brand-blue mb-2">web</span>
+                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Frontend Engineering</h3>
                   <p className="text-sm text-slate-600">
-                    Expertise in protocol design and secure communication layers.
+                    Modern component-driven web applications with React, TypeScript, and clean UI design.
                   </p>
                 </div>
               </div>
@@ -249,7 +246,7 @@ export const About: React.FC = () => {
         </section>
 
         {/* Professional Evolution */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-16 py-20">
+        <section id="evolution" className="max-w-[1280px] mx-auto px-6 md:px-16 py-20">
           <h3 className="text-3xl font-display-lg text-slate-900 text-center mb-12">
             Professional Evolution
           </h3>
@@ -275,10 +272,9 @@ export const About: React.FC = () => {
               <div className="w-16 h-16 bg-brand-blue/10 text-brand-blue rounded-full flex items-center justify-center mb-2">
                 <span className="material-symbols-outlined">developer_mode_tv</span>
               </div>
-              <h4 className="text-xl font-medium text-slate-900">Software Dev</h4>
+              <h4 className="text-xl font-medium text-slate-900">Full-Stack Developer</h4>
               <p className="text-sm text-slate-600">
-                Transitioned from hobbyist projects to professional-grade software development for
-                high-stakes startups.
+                Building full-stack web products, robust APIs, and database-driven client software solutions.
               </p>
               <div className="mt-auto pt-4 text-xs font-semibold tracking-widest text-brand-blue">
                 2022 — PRESENT
@@ -290,12 +286,11 @@ export const About: React.FC = () => {
               style={{ transitionDelay: '200ms' }}
             >
               <div className="w-16 h-16 bg-brand-blue/10 text-brand-blue rounded-full flex items-center justify-center mb-2">
-                <span className="material-symbols-outlined">architecture</span>
+                <span className="material-symbols-outlined">code</span>
               </div>
-              <h4 className="text-xl font-medium text-slate-900">Independent Research</h4>
+              <h4 className="text-xl font-medium text-slate-900">Independent Projects</h4>
               <p className="text-sm text-slate-600">
-                Exploring the intersection of WebGL rendering and backend scalability to create
-                seamless digital experiences.
+                Developing full-stack web applications, open-source utilities, and exploring serverless architectures.
               </p>
               <div className="mt-auto pt-4 text-xs font-semibold tracking-widest text-brand-blue">
                 ONGOING
@@ -306,47 +301,84 @@ export const About: React.FC = () => {
 
         {/* Contact CTA Section */}
         <section className="max-w-[1280px] mx-auto px-6 md:px-16 mb-20">
-          <div className="bg-brand-blue rounded-[40px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between overflow-hidden relative shadow-2xl shadow-brand-blue/20">
-            <div className="relative z-10 max-w-xl text-center md:text-left space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display-lg text-white font-semibold leading-tight">
-                Let's build something <span className="italic font-light text-white/90">exceptional</span> together.
-              </h2>
-              <p className="text-white/80 text-sm">
-                Currently open to collaborations and architectural consulting.
-              </p>
-            </div>
-            <div className="relative z-10 grid grid-cols-2 gap-4 w-full md:w-auto mt-8 md:mt-0">
-              <a
-                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-1.5 backdrop-blur-md border border-white/20 transition-all active:scale-95"
-                href="mailto:hello@fanshi.dev"
-              >
-                <span className="material-symbols-outlined text-white">mail</span>
+            <div className="bg-brand-blue rounded-[40px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between overflow-hidden relative shadow-2xl shadow-brand-blue/20">
+                <div className="relative z-10 max-w-xl text-center md:text-left space-y-3">
+                <h2 className="text-3xl md:text-4xl font-display-lg text-white font-semibold leading-tight">
+                    Let's build something <span className="italic font-light text-white/90">exceptional</span> together.
+                </h2>
+                <p className="text-white/80 text-sm">
+                    Open to full-stack engineering roles, backend API projects, and freelance builds.
+                </p>
+                </div>
+
+                {/* Contact & Social Links Grid */}
+                <div className="relative z-10 grid grid-cols-2 gap-4 w-full md:w-auto mt-8 md:mt-0">
+                
+                {/* Email Link */}
+                <a
+                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                href="#"
+                >
+                <svg
+                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
                 <span className="text-[11px] uppercase tracking-widest font-semibold">Email</span>
-              </a>
-              <a
-                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-1.5 backdrop-blur-md border border-white/20 transition-all active:scale-95"
-                href="#"
-              >
-                <span className="material-symbols-outlined text-white">terminal</span>
-                <span className="text-[11px] uppercase tracking-widest font-semibold">GitHub</span>
-              </a>
-              <a
-                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-1.5 backdrop-blur-md border border-white/20 transition-all active:scale-95"
-                href="#"
-              >
-                <span className="material-symbols-outlined text-white">link</span>
-                <span className="text-[11px] uppercase tracking-widest font-semibold">LinkedIn</span>
-              </a>
-              <a
-                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-1.5 backdrop-blur-md border border-white/20 transition-all active:scale-95"
-                href="#"
-              >
-                <span className="material-symbols-outlined text-white">description</span>
-                <span className="text-[11px] uppercase tracking-widest font-semibold">Read.cv</span>
-              </a>
+                </a>
+
+                {/* GitHub Link */}
+                <a
+                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                    href="https://github.com/fnzh-i"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <svg
+                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                    viewBox="0 0 24 24"
+                    >
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    <span className="text-[11px] uppercase tracking-widest font-semibold">GitHub</span>
+                </a>
+
+                {/* LinkedIn Link */}
+                <a
+                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                    href="https://www.linkedin.com/in/evert-matthew-matias-007a9741b/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <svg
+                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                    viewBox="0 0 24 24"
+                    >
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
+                    </svg>
+                    <span className="text-[11px] uppercase tracking-widest font-semibold">LinkedIn</span>
+                </a>
+
+                {/* Read.cv Link */}
+                <a
+                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <svg
+                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                    viewBox="0 0 24 24"
+                    >
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                    </svg>
+                    <span className="text-[11px] uppercase tracking-widest font-semibold">Read.cv</span>
+                </a>
+
+                </div>
             </div>
-          </div>
-        </section>
+            </section>
       </main>
 
       <Footer />
