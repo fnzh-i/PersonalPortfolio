@@ -78,42 +78,35 @@ export const About: React.FC = () => {
       </div>
 
       {/* Side Nav (Desktop only) */}
-      <aside className="fixed left-0 top-0 h-full w-64 hidden lg:flex flex-col p-8 space-y-8 bg-white/60 backdrop-blur-[30px] border-r border-slate-200/80 z-40 pt-28">
-        <div className="mb-8">
-          <h2 className="text-xl font-medium text-slate-900">Software Engineer</h2>
-          <p className="text-xs uppercase tracking-widest text-slate-500 font-semibold mt-1">
-            E. Matthew Matias
-          </p>
-        </div>
+      <aside className="fixed left-6 top-1/2 -translate-y-1/2 w-60 hidden lg:flex flex-col p-6 space-y-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-3xl shadow-xl shadow-slate-900/5 z-40 transition-all hover:bg-white/80">
         <nav className="flex flex-col space-y-2">
-          <a href="#overview" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
+            <a href="#overview" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
-              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/>
+                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/>
             </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Overview</span>
-          </a>
-          <a href="#competencies" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
+            </a>
+            <a href="#competencies" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
             </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Tech Stack</span>
-          </a>
-          <a href="#narrative" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
+            </a>
+            <a href="#narrative" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
             </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Biography</span>
-          </a>
-          <a href="#evolution" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
+            </a>
+            <a href="#evolution" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
             <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
-              <path d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.19.02-.36.07-.52l-2.55-2.55c-.16.05-.33.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.19 0 .36.02.52.07l4.56-4.55C8.02 9.35 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.35-.07.51l2.55 2.55c.16-.05.33-.07.52-.07s.35.02.51.07l3.56-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"/>
+                <path d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.19.02-.36.07-.52l-2.55-2.55c-.16.05-.33.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.19 0 .36.02.52.07l4.56-4.55C8.02 9.35 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.35-.07.51l2.55 2.55c.16-.05.33-.07.52-.07s.35.02.51.07l3.56-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"/>
             </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Timeline</span>
-          </a>
+            </a>
         </nav>
-      </aside>
-
-      <main className="relative z-10 lg:ml-64 pt-12 pb-20">
+        </aside>
+      <main className="relative z-10 max-w-[1280px] mx-auto pt-12 pb-20">
         {/* Apple-Style Hero Projection Section */}
         <section id="overview" className="max-w-[1280px] mx-auto px-6 md:px-16 mb-24">
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -215,48 +208,58 @@ export const About: React.FC = () => {
 
         {/* Personal Narrative */}
         <section id="narrative" className="py-20 border-y border-slate-200/80 bg-white/40 backdrop-blur-md">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
-            <div className="md:col-span-4 sticky top-28 h-fit">
-              <h2 className="text-3xl font-display-lg text-slate-900 font-medium mb-4">
+        {/* Added items-start to allow position: sticky to function */}
+        <div className="max-w-[1280px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            
+            {/* Left sticky column */}
+            <div className="md:col-span-4 md:sticky md:top-28 h-fit">
+            <h2 className="text-3xl font-display-lg text-slate-900 font-medium mb-4">
                 The Self-Taught <br />
                 Full-Stack Dev
-              </h2>
-              <div className="w-12 h-1 bg-brand-blue rounded-full mb-8" />
+            </h2>
+            <div className="w-12 h-1 bg-brand-blue rounded-full mb-8" />
             </div>
+
+            {/* Right content column */}
             <div className="md:col-span-8 space-y-8">
-              <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
+            <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
                 My software journey started with curiosity—understanding how web applications handle data flow from interactive frontends down to the backend database layers. 
                 As a self-taught engineer currently pursuing a CS degree in the Philippines, I specialize in engineering complete web ecosystems.
-              </p>
-              <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
+            </p>
+            <p className="text-lg leading-relaxed text-slate-600 reveal-on-scroll">
                 Being based in the Philippines has shaped my perspective on efficiency and
                 resilience. In an environment where connectivity and resources can be volatile, I
                 learned to prioritize software that is both lightweight and incredibly durable. My
                 passion lies in the "invisible" side of technology: networking protocols, database
                 optimization, and cloud-native infrastructure.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            </p>
+
+            {/* Grid Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                {/* Backend Card - Server Icon */}
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-                  </svg>
-                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Backend Development</h3>
-                  <p className="text-sm text-slate-600">
+                <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
+                    <path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zm0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zM6 4h2v1H6V4zm0 8h2v1H6v-1zm0 8h2v1H6v-1z"/>
+                </svg>
+                <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Backend Development</h3>
+                <p className="text-sm text-slate-600">
                     High-performance server REST APIs, authentication workflows, and microservices.
-                  </p>
+                </p>
                 </div>
+
+                {/* Frontend Card - Layout/Browser Icon */}
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-                  </svg>
-                  <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Frontend Engineering</h3>
-                  <p className="text-sm text-slate-600">
+                </svg>
+                <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Frontend Engineering</h3>
+                <p className="text-sm text-slate-600">
                     Modern component-driven web applications with React, TypeScript, and clean UI design.
-                  </p>
+                </p>
                 </div>
-              </div>
             </div>
-          </div>
+            </div>
+        </div>
         </section>
 
         {/* Professional Evolution */}
