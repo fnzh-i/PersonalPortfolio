@@ -78,7 +78,7 @@ export const About: React.FC = () => {
       </div>
 
       {/* Side Nav (Desktop only) */}
-      <aside className="fixed left-6 top-1/2 -translate-y-1/2 w-60 hidden lg:flex flex-col p-6 space-y-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-3xl shadow-xl shadow-slate-900/5 z-40 transition-all hover:bg-white/80">
+      <aside className="fixed left-6 top-1/2 -translate-y-1/2 w-60 hidden lg:flex flex-col p-6 space-y-6 bg-white/2 backdrop-blur-sm border border-white/80 rounded-3xl shadow-xl shadow-slate-900/5 z-40 transition-all hover:bg-white/25 transform-gpu isolate">
         <nav className="flex flex-col space-y-2">
           <a
             href="#overview"
