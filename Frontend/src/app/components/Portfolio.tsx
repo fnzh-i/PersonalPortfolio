@@ -55,10 +55,10 @@ const Portfolio: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href="#projects"
+                href="/projects"
                 className="bg-on-background text-white px-8 py-4 rounded-2xl text-[15px] font-semibold hover:bg-brand-blue transition-all shadow-xl shadow-black/5 active:scale-[0.98]"
               >
-                View Case Studies
+                View Architecture & Code
               </a>
               <a
                 href="/about"
@@ -70,24 +70,67 @@ const Portfolio: React.FC = () => {
           </div>
 
           {/* Clean Graphic Display */}
-          <div className="flex-1 w-full relative">
-            <div className="aspect-square max-w-[380px] md:max-w-[420px] mx-auto">
-              <div className="rounded-[48px] shadow-2xl">
-                <div className="rounded-[48px] bg-white/30 macos-glass-thick p-2 overflow-hidden">
-                  <div className="w-full h-full rounded-[40px] overflow-hidden bg-slate-900/90 relative group">
-                    <img
-                      className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-                      src="https://avatars.githubusercontent.com/u/198473281?v=4"
-                      alt="Evert Matthew Matias Profile"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80" />
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                      <p className="text-xs font-mono uppercase tracking-widest text-brand-blue">
-                        E. Matthew Matias
+          {/* Clean Graphic Display - Apple Hardware & UI Presentation */}
+          <div className="flex-1 w-full relative flex justify-center items-center">
+            <div className="aspect-square w-full max-w-[380px] md:max-w-[420px] relative group">
+              {/* Ambient Backlight Glow (Hardware Projection) */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-brand-blue/30 via-indigo-500/20 to-transparent blur-3xl opacity-40 group-hover:opacity-75 transition-opacity duration-700 pointer-events-none rounded-[56px]" />
+
+              {/* Outer Hardware Enclosure (Aluminum/Glass Finish) */}
+              <div
+                className="relative w-full h-full rounded-[48px] p-2.5 transition-transform duration-500 ease-out transform-gpu group-hover:scale-[1.015] overflow-hidden"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.25) 100%)",
+                  boxShadow:
+                    "0 30px 60px -12px rgba(15, 23, 42, 0.18), 0 18px 36px -18px rgba(0, 0, 0, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.9)",
+                }}
+              >
+                {/* Inner Display Bezel */}
+                <div className="relative w-full h-full rounded-[38px] overflow-hidden bg-slate-950 border border-white/40 shadow-inner transform-gpu">
+                  {/* Avatar Image (Full Color Always) */}
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    src="https://avatars.githubusercontent.com/u/198473281?v=4"
+                    alt="Evert Matthew Matias Profile"
+                  />
+
+                  {/* Dynamic Specular Glass Reflection Sweep */}
+                  <div
+                    className="absolute inset-0 pointer-events-none z-10 transition-transform duration-1000 ease-in-out -translate-x-full group-hover:translate-x-full"
+                    style={{
+                      background:
+                        "linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.25) 50%, transparent 80%)",
+                    }}
+                  />
+
+                  {/* Ambient Bottom Gradient for Contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-80 pointer-events-none" />
+
+                  {/* macOS Control Center Status Pill (Top-Left) */}
+                  <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/60 backdrop-blur-xl border border-white/20 shadow-lg">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[10px] font-mono tracking-wider uppercase text-slate-200 font-medium">
+                      ONLINE // DEV
+                    </span>
+                  </div>
+
+                  {/* Floating Glass Meta Tag (Bottom) */}
+                  <div className="absolute bottom-4 left-4 right-4 z-20 p-4 rounded-2xl bg-slate-950/40 backdrop-blur-md border border-white/20 shadow-xl shadow-black/20 flex items-center justify-between transition-all duration-300 group-hover:bg-slate-950/60 group-hover:border-white/35">
+                    <div className="space-y-0.5">
+                      <p className="text-[11px] font-mono uppercase tracking-widest text-slate-300/90 font-semibold">
+                        Evert Matthew Matias
                       </p>
-                      <p className="text-sm font-semibold">
+                      <p className="text-sm font-semibold text-white/95 tracking-tight">
                         Full-Stack Software Engineer
                       </p>
+                    </div>
+
+                    {/* Glassmorphic Verification Badge */}
+                    <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 flex items-center justify-center shrink-0 shadow-sm transition-all duration-300 group-hover:bg-white/15 group-hover:border-white/40 group-hover:text-white">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                      </svg>
                     </div>
                   </div>
                 </div>
