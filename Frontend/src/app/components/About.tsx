@@ -87,19 +87,27 @@ export const About: React.FC = () => {
         </div>
         <nav className="flex flex-col space-y-2">
           <a href="#overview" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
-            <span className="material-symbols-outlined text-brand-blue">dashboard</span>
+            <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/>
+            </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Overview</span>
           </a>
           <a href="#competencies" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
-            <span className="material-symbols-outlined text-brand-blue">terminal</span>
+            <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+            </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Tech Stack</span>
           </a>
           <a href="#narrative" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
-            <span className="material-symbols-outlined text-brand-blue">person</span>
+            <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Biography</span>
           </a>
           <a href="#evolution" className="flex items-center space-x-3 p-3 text-slate-600 hover:bg-white/80 rounded-lg transition-all">
-            <span className="material-symbols-outlined text-brand-blue">timeline</span>
+            <svg className="w-5 h-5 text-brand-blue fill-current" viewBox="0 0 24 24">
+              <path d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.19.02-.36.07-.52l-2.55-2.55c-.16.05-.33.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.19 0 .36.02.52.07l4.56-4.55C8.02 9.35 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.35-.07.51l2.55 2.55c.16-.05.33-.07.52-.07s.35.02.51.07l3.56-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"/>
+            </svg>
             <span className="text-xs uppercase tracking-wider font-semibold">Timeline</span>
           </a>
         </nav>
@@ -152,7 +160,9 @@ export const About: React.FC = () => {
                       <p className="text-[11px] text-slate-500 font-mono">@FANSHI • PH</p>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                      <span className="material-symbols-outlined text-sm">verified</span>
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -227,14 +237,18 @@ export const About: React.FC = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <span className="material-symbols-outlined text-brand-blue mb-2">terminal</span>
+                  <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                  </svg>
                   <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Backend Development</h3>
                   <p className="text-sm text-slate-600">
                     High-performance server REST APIs, authentication workflows, and microservices.
                   </p>
                 </div>
                 <div className="glass-panel p-6 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm">
-                  <span className="material-symbols-outlined text-brand-blue mb-2">web</span>
+                  <svg className="w-6 h-6 text-brand-blue fill-current mb-2" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                  </svg>
                   <h3 className="text-xs uppercase tracking-widest font-semibold mb-2 text-slate-900">Frontend Engineering</h3>
                   <p className="text-sm text-slate-600">
                     Modern component-driven web applications with React, TypeScript, and clean UI design.
@@ -253,7 +267,9 @@ export const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="glass-panel p-8 rounded-3xl bg-white/70 border border-slate-200/80 shadow-sm flex flex-col items-center text-center space-y-4 reveal-on-scroll">
               <div className="w-16 h-16 bg-brand-blue/10 text-brand-blue rounded-full flex items-center justify-center mb-2">
-                <span className="material-symbols-outlined">school</span>
+                <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                  <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                </svg>
               </div>
               <h4 className="text-xl font-medium text-slate-900">CS Candidate</h4>
               <p className="text-sm text-slate-600">
@@ -270,7 +286,9 @@ export const About: React.FC = () => {
               style={{ transitionDelay: '100ms' }}
             >
               <div className="w-16 h-16 bg-brand-blue/10 text-brand-blue rounded-full flex items-center justify-center mb-2">
-                <span className="material-symbols-outlined">developer_mode_tv</span>
+                <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                  <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/>
+                </svg>
               </div>
               <h4 className="text-xl font-medium text-slate-900">Full-Stack Developer</h4>
               <p className="text-sm text-slate-600">
@@ -286,7 +304,9 @@ export const About: React.FC = () => {
               style={{ transitionDelay: '200ms' }}
             >
               <div className="w-16 h-16 bg-brand-blue/10 text-brand-blue rounded-full flex items-center justify-center mb-2">
-                <span className="material-symbols-outlined">code</span>
+                <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                  <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                </svg>
               </div>
               <h4 className="text-xl font-medium text-slate-900">Independent Projects</h4>
               <p className="text-sm text-slate-600">
@@ -301,84 +321,84 @@ export const About: React.FC = () => {
 
         {/* Contact CTA Section */}
         <section className="max-w-[1280px] mx-auto px-6 md:px-16 mb-20">
-            <div className="bg-brand-blue rounded-[40px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between overflow-hidden relative shadow-2xl shadow-brand-blue/20">
-                <div className="relative z-10 max-w-xl text-center md:text-left space-y-3">
-                <h2 className="text-3xl md:text-4xl font-display-lg text-white font-semibold leading-tight">
-                    Let's build something <span className="italic font-light text-white/90">exceptional</span> together.
-                </h2>
-                <p className="text-white/80 text-sm">
-                    Open to full-stack engineering roles, backend API projects, and freelance builds.
-                </p>
-                </div>
+          <div className="bg-brand-blue rounded-[40px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between overflow-hidden relative shadow-2xl shadow-brand-blue/20">
+            <div className="relative z-10 max-w-xl text-center md:text-left space-y-3">
+              <h2 className="text-3xl md:text-4xl font-display-lg text-white font-semibold leading-tight">
+                Let's build something <span className="italic font-light text-white/90">exceptional</span> together.
+              </h2>
+              <p className="text-white/80 text-sm">
+                Open to full-stack engineering roles, backend API projects, and freelance builds.
+              </p>
+            </div>
 
-                {/* Contact & Social Links Grid */}
-                <div className="relative z-10 grid grid-cols-2 gap-4 w-full md:w-auto mt-8 md:mt-0">
-                
-                {/* Email Link */}
-                <a
+            {/* Contact & Social Links Grid */}
+            <div className="relative z-10 grid grid-cols-2 gap-4 w-full md:w-auto mt-8 md:mt-0">
+              
+              {/* Email Link */}
+              <a
                 className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
                 href="#"
-                >
+              >
                 <svg
-                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
-                    viewBox="0 0 24 24"
+                  className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                  viewBox="0 0 24 24"
                 >
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
                 <span className="text-[11px] uppercase tracking-widest font-semibold">Email</span>
-                </a>
+              </a>
 
-                {/* GitHub Link */}
-                <a
-                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
-                    href="https://github.com/fnzh-i"
-                    target="_blank"
-                    rel="noreferrer"
+              {/* GitHub Link */}
+              <a
+                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                href="https://github.com/fnzh-i"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                  viewBox="0 0 24 24"
                 >
-                    <svg
-                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
-                    viewBox="0 0 24 24"
-                    >
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                    </svg>
-                    <span className="text-[11px] uppercase tracking-widest font-semibold">GitHub</span>
-                </a>
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span className="text-[11px] uppercase tracking-widest font-semibold">GitHub</span>
+              </a>
 
-                {/* LinkedIn Link */}
-                <a
-                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
-                    href="https://www.linkedin.com/in/evert-matthew-matias-007a9741b/"
-                    target="_blank"
-                    rel="noreferrer"
+              {/* LinkedIn Link */}
+              <a
+                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                href="https://www.linkedin.com/in/evertmatthewmatias/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                  viewBox="0 0 24 24"
                 >
-                    <svg
-                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
-                    viewBox="0 0 24 24"
-                    >
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
-                    </svg>
-                    <span className="text-[11px] uppercase tracking-widest font-semibold">LinkedIn</span>
-                </a>
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
+                </svg>
+                <span className="text-[11px] uppercase tracking-widest font-semibold">LinkedIn</span>
+              </a>
 
-                {/* Read.cv Link */}
-                <a
-                    className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer"
+              {/* Read.cv Link */}
+              <a
+                className="bg-white/10 hover:bg-white/20 text-white p-5 rounded-2xl flex flex-col items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all active:scale-95 group min-w-[110px]"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
+                  viewBox="0 0 24 24"
                 >
-                    <svg
-                    className="w-6 h-6 fill-current group-hover:scale-110 transition-transform"
-                    viewBox="0 0 24 24"
-                    >
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
-                    </svg>
-                    <span className="text-[11px] uppercase tracking-widest font-semibold">Read.cv</span>
-                </a>
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                </svg>
+                <span className="text-[11px] uppercase tracking-widest font-semibold">Read.cv</span>
+              </a>
 
-                </div>
             </div>
-            </section>
+          </div>
+        </section>
       </main>
 
       <Footer />
