@@ -165,6 +165,7 @@
 
 .animate-radar {
   animation: radarSpin 20s linear infinite;
+}
 /* Glass & Animation Utilities */
 @utility glass-panel {
   background: rgba(255, 255, 255, 0.5);
