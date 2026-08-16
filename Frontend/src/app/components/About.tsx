@@ -167,6 +167,9 @@ export const About: React.FC = () => {
                     alt="Evert Matthew Matias"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"
                     src="https://avatars.githubusercontent.com/u/198473281?v=4"
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                   />
 
                   {/* FIXED: Glass Reflection Sweep Overlay */}

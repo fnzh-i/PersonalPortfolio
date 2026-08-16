@@ -14,6 +14,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <img
             src={project.imageUrl}
             alt={`${project.title} preview`}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>

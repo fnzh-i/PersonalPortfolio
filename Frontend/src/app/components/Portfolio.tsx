@@ -1,13 +1,26 @@
-import React, { useEffect, useState } from "react";
-import LoadingScreen from "./LoadingScreen";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import Footer from "./Footer";
 import { FeaturedProjects } from "./FeaturedProjects";
 
+const LoadingScreen = lazy(() => import("./LoadingScreen"));
+
 let hasShownPortfolioLoader = false;
+
+function shouldShowIntroLoader() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isTouchPrimary = window.matchMedia("(pointer: coarse)").matches;
+  const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+
+  return !prefersReducedMotion && !isTouchPrimary && !isSmallScreen;
+}
 
 const Portfolio: React.FC = () => {
   const [showLoading, setShowLoading] = useState(
-    () => !hasShownPortfolioLoader,
+    () => !hasShownPortfolioLoader && shouldShowIntroLoader(),
   );
 
   useEffect(() => {
@@ -18,13 +31,23 @@ const Portfolio: React.FC = () => {
     const timer = window.setTimeout(() => {
       hasShownPortfolioLoader = true;
       setShowLoading(false);
-    }, 3000);
+    }, 1200);
 
     return () => window.clearTimeout(timer);
   }, [showLoading]);
 
   if (showLoading) {
-    return <LoadingScreen />;
+    return (
+      <Suspense
+        fallback={
+          <div className="min-h-screen w-full flex items-center justify-center bg-[#050508] text-white/80 text-sm tracking-wide">
+            Loading...
+          </div>
+        }
+      >
+        <LoadingScreen />
+      </Suspense>
+    );
   }
 
   return (
@@ -145,6 +168,9 @@ const Portfolio: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     src="https://avatars.githubusercontent.com/u/198473281?v=4"
                     alt="Evert Matthew Matias Profile"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                   />
 
                   {/* Glass Reflection Sweep */}

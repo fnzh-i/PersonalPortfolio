@@ -15,6 +15,9 @@ export const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({ projec
           <img
             src={project.imageUrl}
             alt={`${project.title} preview`}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
